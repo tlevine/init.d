@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case "$1" in
+start)
+  /usr/bin/sudo -u tlevine imapfilter
+;;
+stop)
+  /usr/bin/sudo -u tlevine killall imapfilter
+;;
+*)
+  echo "Usage: $0 {start|stop}"
+  exit 1
+esac
+exit 0
